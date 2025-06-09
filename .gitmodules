@@ -1,0 +1,6 @@
+[submodule "third_party/sv-tests"]
+	path = third_party/sv-tests
+	url = https://github.com/chipsalliance/sv-tests.git
+[submodule "sv-tests"]
+	path = sv-tests
+	url = https://github.com/chipsalliance/sv-tests.git
