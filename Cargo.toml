@@ -1,0 +1,55 @@
+[workspace]
+members = ["lib/analysis", "lib/lexer", "lib/parser", "lib/syntax-tree"]
+resolver = "2"
+
+[package]
+name = "zverilog"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "zverilog"
+path = "src/main.rs"
+
+[dependencies]
+analysis = { path = "lib/analysis" }
+lexer = { path = "lib/lexer" }
+parser = { path = "lib/parser" }
+syntax-tree = { path = "lib/syntax-tree" }
+
+[build-dependencies]
+chrono = { workspace = true }
+
+[workspace.dependencies]
+chrono = "0.4"
+
+[profile.dev]
+opt-level = 0
+debug = true
+debug-assertions = true
+overflow-checks = true
+lto = false
+panic = 'unwind'
+incremental = true
+codegen-units = 256
+rpath = false
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
+overflow-checks = false
+lto = "fat"
+panic = 'abort'
+incremental = false
+codegen-units = 1
+
+[profile.dev.build-override]
+opt-level = 3
+codegen-units = 1
+
+[profile.dev-fast]
+inherits = "dev"
+opt-level = 1
+incremental = true
+codegen-units = 256

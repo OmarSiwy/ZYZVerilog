@@ -1,0 +1,3 @@
+/home/omare/Documents/Projects/ZYZVerilog/lib/lexer/build/CMakeFiles/native.dir
+/home/omare/Documents/Projects/ZYZVerilog/lib/lexer/build/CMakeFiles/edit_cache.dir
+/home/omare/Documents/Projects/ZYZVerilog/lib/lexer/build/CMakeFiles/rebuild_cache.dir

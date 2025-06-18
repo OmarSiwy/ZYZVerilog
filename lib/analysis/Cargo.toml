@@ -1,0 +1,10 @@
+[package]
+name = "analysis"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+syntax-tree = { path = "../syntax-tree" }
+
+[build-dependencies]
+chrono = { workspace = true }
